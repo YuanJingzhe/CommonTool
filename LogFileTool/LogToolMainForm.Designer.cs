@@ -36,6 +36,7 @@
             delKeywordsLinesBtn = new Button();
             outputPathLabel = new Label();
             outputFilePathTextBox = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // oriFilePathTextBox
@@ -59,7 +60,7 @@
             // keywordLabel
             // 
             keywordLabel.AutoSize = true;
-            keywordLabel.Location = new Point(12, 69);
+            keywordLabel.Location = new Point(46, 73);
             keywordLabel.Name = "keywordLabel";
             keywordLabel.Size = new Size(54, 20);
             keywordLabel.TabIndex = 2;
@@ -71,10 +72,11 @@
             keywordsTextBox.Name = "keywordsTextBox";
             keywordsTextBox.Size = new Size(647, 27);
             keywordsTextBox.TabIndex = 3;
+            keywordsTextBox.TextChanged += OnKeyWordsChanged;
             // 
             // getKeywordsLinesBtn
             // 
-            getKeywordsLinesBtn.Location = new Point(125, 160);
+            getKeywordsLinesBtn.Location = new Point(125, 165);
             getKeywordsLinesBtn.Name = "getKeywordsLinesBtn";
             getKeywordsLinesBtn.Size = new Size(94, 29);
             getKeywordsLinesBtn.TabIndex = 4;
@@ -84,7 +86,7 @@
             // 
             // delKeywordsLinesBtn
             // 
-            delKeywordsLinesBtn.Location = new Point(512, 160);
+            delKeywordsLinesBtn.Location = new Point(512, 167);
             delKeywordsLinesBtn.Name = "delKeywordsLinesBtn";
             delKeywordsLinesBtn.Size = new Size(94, 29);
             delKeywordsLinesBtn.TabIndex = 5;
@@ -95,7 +97,7 @@
             // outputPathLabel
             // 
             outputPathLabel.AutoSize = true;
-            outputPathLabel.Location = new Point(12, 112);
+            outputPathLabel.Location = new Point(31, 126);
             outputPathLabel.Name = "outputPathLabel";
             outputPathLabel.Size = new Size(69, 20);
             outputPathLabel.TabIndex = 6;
@@ -103,17 +105,28 @@
             // 
             // outputFilePathTextBox
             // 
-            outputFilePathTextBox.Location = new Point(125, 109);
+            outputFilePathTextBox.Location = new Point(125, 123);
             outputFilePathTextBox.Name = "outputFilePathTextBox";
             outputFilePathTextBox.Size = new Size(646, 27);
             outputFilePathTextBox.TabIndex = 7;
             outputFilePathTextBox.TextChanged += OutPutFilePathTextBoxChanged;
             // 
-            // Form1
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.Gray;
+            label1.Location = new Point(124, 99);
+            label1.Name = "label1";
+            label1.Size = new Size(309, 20);
+            label1.TabIndex = 8;
+            label1.Text = "支持多个关键词，英文逗号分隔；区分大小写";
+            // 
+            // LogToolMainForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 216);
+            Controls.Add(label1);
             Controls.Add(outputFilePathTextBox);
             Controls.Add(outputPathLabel);
             Controls.Add(delKeywordsLinesBtn);
@@ -138,5 +151,6 @@
         private Button delKeywordsLinesBtn;
         private Label outputPathLabel;
         private TextBox outputFilePathTextBox;
+        private Label label1;
     }
 }
